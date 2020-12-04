@@ -4,25 +4,35 @@ var lCase = ["a","b","c","d","e", "f","g","h","i","j","k","l","o","m","n","p","q
 var uCase = ["A","B","C","D","E","F","G","H","I","J","K","L","O","M","N","P","R", "S","T","U","V","W","X","Y","Z"]
 var num   = ["1","2","3","4","5","6","7","8","9"]
 var sChar = ['@','%','+','/', "'", '!', '#', '$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
-var inclc, incuc, incnum, incsp;
-var pwdLen;
+var inclc = false;
+var incuc = false;
+var incnum = false;
+var incsp = false;
+var pwdLen = 0;
 var password = [];
-  var userpwd;
+var userpwd;
+
 
     function pwdoptions() {
-          pwdLen = parseInt(prompt("What should be the length of the password please specify a number between 8 and 128"))
-          if (isNaN(pwdLen) || pwdLen < 8 || pwdLen > 128) {
-          alert("Password length must be a number between 8 and 128");
-                
-          }    
+      while (pwdLen < 8 || pwdLen > 128) {
+        pwdLen = parseInt(prompt("What should be the length of the password please specify a number between 8 and 128"))
+        if (isNaN(pwdLen) || pwdLen < 8 || pwdLen > 128) {
+          alert("Password length must be a number between 8 and 128");              
+        } 
+      }  
+      console.log(inclc, incuc, incnum, incsp);
+      while (inclc === false && incuc === false && incnum === false && incsp === false) {
+          alert("Select at least one criteria for password")
           inclc = confirm("Do you want to include lower case characters?");
           incuc = confirm("Do you want to include upper case characters?");
           incnum = confirm("Do you want to include numbers?");
           incsp = confirm("Do you want to include specialcharacters?");
           console.log(pwdLen, inclc, incuc, incnum, incsp);  
-          var pwdchoices = {pwdLen:pwdLen, inclc:inclc, incuc:incuc, incnum:incnum, incsp:incsp} 
-          console.log("pwdchoices ", pwdchoices)
-          return pwdchoices;
+          var pwdchoices = {pwdLen:pwdLen, inclc:inclc, incuc:incuc, incnum:incnum, incsp:incsp}; 
+          
+      }
+      console.log("pwdchoices ", pwdchoices)
+      return pwdchoices;
   }
      
      function randgen(array) {
