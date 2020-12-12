@@ -1,8 +1,8 @@
 # 03 JavaScript: Password Generator
 
-## Your Task
+## My Task
 
-This week’s homework required me to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that I wrote. The user interface is responsive, so it adapts to multiple screen sizes.
+This week’s homework required me to create an application that an employee can use to generate a random password based on criteria they’ve selected. The application is optimized for browers, however it is recommended to use Chrome. The user interface is responsive, so it adapts to multiple screen sizes.
 
 The password can include lower case, upper case, number or special characters. Approved special characters can be referenced here: [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
 
@@ -16,7 +16,7 @@ The application validates the user inputs ensuring that the specificed password 
 
 The following image shows the web application's appearance and functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+![password generator demo](./Assets/javascript-homework-demo.png)
 
 ### ApplicationDeployment: 
 The application can be accessed through URL [password generator](https://asheth22.github.io/pwd-generator/)
